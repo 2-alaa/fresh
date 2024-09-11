@@ -1,0 +1,61 @@
+
+
+
+
+<section class="bg-main-light rounded-1 shadow my-5  p-5  w-75 mx-auto   ">
+   <div class="container">
+
+    <div class="d-flex justify-content-between align-items-center">
+         <h1 class="  fw-bold text-main pb-2">{{"cart.shop cart" |translate}}   <i class="fa-solid fa-cart-plus"></i></h1>
+    <button (click)="clear()" class="btn btn-outline-success fw-bold">{{"cart.Clear Cart" |translate}} </button>
+    </div>
+   
+   
+    <p class="fw-bolder text-muted lead fs-4 text-center">Total Price : {{cartDetalis.totalCartPrice|currency:' ' }} EGP</p>
+    <hr>
+
+
+@for (item of cartDetalis.products; track item.product.id) {
+
+    <div class="row  p-5  align-items-center">
+        <div class="col-md-1">
+            <div class="product">
+                
+                                    <img [src]="item.product.imageCover" class="w-100 p-1" [alt]="item.product.title">
+
+             
+            </div>
+        </div>
+        <div class="col-md-11">
+            <div class="d-flex justify-content-between align-items-center ">
+                <div>
+                       <h3 class="h5 fw-bold text-main">{{item.product.title}}</h3>
+                <p class=" fw-bold text-muted mb-2">Price : {{item.price |currency:' ' }} EGP</p>
+             <button class=" btn-main" (click)="removeItem(item.product.id)" > {{"cart.Remove" |translate}} <i class="fa-regular fa-trash-can px-1 "></i></button>  
+                </div>
+             
+       
+
+            <div class="d-flex align-items-center justify-content-between gap-2 cart  ">
+                <span (click)="updataCount(item.product.id,item.count + 1)"> <i class="fa-solid fa-circle-plus fa-2xl text-main"></i></span>
+
+
+               <h3 class="fw-bold h5 text-muted ">{{item.count}}</h3>
+                <span (click)="updataCount(item.product.id,item.count - 1)" ><i class="fa-solid fa-circle-minus fa-2xl text-danger "></i></span>
+            </div>
+            </div>
+            
+        </div>
+    
+    </div>
+    <hr>
+}
+
+<button [routerLink]="['/orders' , cartDetalis._id]" class=" btn-main m-5 ">{{"cart.Orders" |translate}}  </button>
+</div>
+</section>
+
+
+
+
+

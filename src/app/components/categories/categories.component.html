@@ -1,0 +1,42 @@
+<section >
+    <h1 class="fw-bold text-main p-5 text-center">{{"cat.all categories" | translate}}</h1>
+ 
+ 
+ 
+ 
+    <div class="container-fluid my-4">
+     <div class="row g-3">
+ 
+ 
+ @for (cat of categoriesList ; track cat._id) {
+ 
+ 
+     <div class="col-md-3 ">
+             <div class="   product p-2 ">
+                 <div [routerLink]="['/categoriesdet',cat._id]">
+ 
+               
+                 <img [src]="cat.image" height="450px" class="w-100 " [alt]="cat.name">
+                 <h3 class="small text-main pt-1 fw-bold">{{cat.name}}</h3>
+         
+                      
+               
+ 
+                     </div>
+ 
+ 
+                
+             </div>
+         </div>
+ }
+ 
+ 
+         
+         
+ 
+         
+           
+         
+     </div>
+    </div>
+ </section>

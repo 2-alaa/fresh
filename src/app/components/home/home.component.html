@@ -1,0 +1,162 @@
+
+
+<!-----static slider-->
+
+<section class="py-3">
+    <div class="row g-0">
+       <div class="col-md-9">
+        <div>
+              <owl-carousel-o [options]="customOptionsMain">
+            <ng-template carouselSlide>
+                <img src="./assets/images/slider-image-1.jpeg" height="300px" class="w-100">
+            </ng-template>  
+             
+            <ng-template carouselSlide>
+                <img src="./assets/images/slider-image-2.jpeg" height="300px" class="w-100">
+            </ng-template> 
+            <ng-template carouselSlide>
+                <img src="./assets/images/slider-image-3.jpeg" height="300px" class="w-100">
+            </ng-template> 
+            <ng-template carouselSlide>
+                <img src="./assets/images/grocery-banner-2.jpeg" height="300px" class="w-100">
+            </ng-template>
+            <ng-template carouselSlide>
+                <img src="./assets/images/grocery-banner.png" height="300px" class="w-100">
+            </ng-template>
+            <ng-template carouselSlide>
+                <img src="./assets/images/slider-2.jpeg" height="300px" class="w-100">
+            </ng-template>
+            <ng-template carouselSlide>
+                <img src="./assets/images/banner-4.jpeg" height="300px" class="w-100">
+            </ng-template>
+            <ng-template carouselSlide>
+                <img src="./assets/images/blog-img-2.jpeg" height="300px" class="w-100">
+            </ng-template>
+            <ng-template carouselSlide>
+                <img src="./assets/images/blog-img-1.jpeg" height="300px" class="w-100">
+            </ng-template>
+
+          </owl-carousel-o>
+  
+             
+      
+
+       
+        </div>
+      
+
+
+        
+       </div>
+       <div class="col-md-3">
+        <img src="./assets/images/slider-image-2.jpeg" class="w-100" height="150px" alt="">
+        <img height="150px" class="w-100 " src="./assets/images/slider-image-3.jpeg" alt="">
+       </div>
+
+    </div>
+</section>
+
+
+
+
+<!-----categroy-->
+
+<section class="my-2">
+    <h1 class="fw-bolder text-main p-3 text-center">  {{"home.popluar categries" |translate}} </h1>
+    
+        <owl-carousel-o [options]="customOptionscategories">
+
+            
+            @for (cat of categoriesList; track cat._id) {
+
+                <ng-template carouselSlide >
+                <div>
+                    <img [src]="cat.image" height="350px" class="w-100" [alt]="cat.name">
+                    <h3 class="h6 text-main fw-bold p-2 text-center">{{cat.name}}</h3>
+                </div>
+              </ng-template>
+            }
+        
+              
+          </owl-carousel-o>
+
+
+   
+</section>
+
+
+
+<!-----product-->
+
+<section >
+   <h1 class="fw-bold text-main p-3 ">{{"home.popular products" |translate}}</h1>
+
+   <input [(ngModel)]="text" type="search" placeholder="Search By Name" class="form-control w-50 mx-auto my-2">
+
+
+
+   <div class="container-fluid my-4">
+    <div class="row g-3">
+
+
+@for (product of produtList.slice(0,35) | search : text  ; track product.id) {
+
+
+    <div class="col-md-2 ">
+            <div class="   product p-2 ">
+                @if(!wishListData.includes($any(product.id))){
+                    <i (click)="addFav(product.id)" class="fa-regular fa-heart heart fa-xl text-danger cr fav"></i>
+                  }
+                  @else if (wishListData.includes($any(product._id))) {
+                    <i (click)="removeFav(product.id)" class="fa-solid fa-heart heart text-danger fa-xl cr fav "></i>
+                  }
+
+
+                <div [routerLink]="['/det',product.id]">
+
+            
+             
+                <img [src]="product.imageCover" class="w-100 " [alt]="product.title">
+              <div class="d-flex justify-content-between align-items-center ">
+                <h3 class="small text-main pt-1 fw-bold">{{product.category.name}}</h3>
+                    <img src="./assets/images/raya-logo.webp " class="w-25" alt="">
+              </div>
+                     
+                <h4 class="h6 ">{{product.title.split("",12).join("")}}</h4>
+                <div class="d-flex justify-content-between align-items-center ">
+                    <p class="h6 price-color fw-bold mt-2   fs-6">{{product.price|currency:' ' }}EGP </p>
+                    <div>
+                        
+                        @for (num of [1,2,3,4,5].slice(0,product.ratingsAverage); track $index) {
+                    <span><i class="fas fa-star rating-color "></i></span>
+
+                        }
+                       @if (product.ratingsAverage%1 !==0) {
+                                                    <i class="fa-solid fa-star-half-stroke rating-color "></i>
+
+                       }
+                        
+                        <span class="text-muted">{{product.ratingsAverage}}</span>
+                    </div>
+
+                     </div>
+
+                    </div>
+
+                    <button (click)="addCart(product.id)" class=" btn-main   w-100 text-capitalize">{{"home.add to cart" |translate}}<i class="fa-solid fa-cart-plus ps-2"></i></button>
+
+               
+            </div>
+        </div>
+}
+
+
+        
+        
+
+        
+          
+        
+    </div>
+   </div>
+</section>

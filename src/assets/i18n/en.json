@@ -1,0 +1,98 @@
+{
+    "navbar":{
+        "home":"Home",
+        "product":"Product",
+         "categories": "Caegories",
+         "brands":"Brands",
+         "signout": "SignOut",
+         "lang":"Lang"
+    },
+
+
+    "home":{
+        "popluar categries":"Popluar Categries",
+        "popular products ":"Popular Products ",
+         "add to cart":"Add To Cart"
+    },
+    
+    "product":{
+        "all products":"All products" 
+    },
+
+    "detalis":{
+        "details product":"Details Broduct" 
+    },
+
+    "cat":{
+        "all categories":"All Categories" 
+    } ,
+    "brand":{
+        "all brands":"All Brands" 
+    },
+
+
+    "login":{
+        "login Now:":"login Now:",
+        "email:":"Email: ",
+         "password:":"Password:",
+          "forgot password?":"Forgot Password?"
+    },
+
+    "wishlist":{
+        "My wishlist":"My wishlist",
+        "Remove":"Remove ",
+         "Add To Cart":"Add To Cart"
+    },
+    "cart":{
+        "shop cart":"shop cart",
+        "Clear Cart":"Clear Cart",
+        "Remove":"Remove ",
+         "Orders":"Orders "
+         
+    },
+    "Orders":{
+        "shippingAddress":"shippingAddress",
+        "Detalis":"Detalis",
+        "phone":"phone",
+        "city":"city ",
+         "Check Out":"Check Out "
+         
+    },
+    "forgot":{
+        "email:":"email:",
+        "verify email":"verify email",
+        "resetCode":"resetCode",
+        "verify Code":"verify Code",
+         "newPassword:":"newPassword:",
+         "Reset Password":"Reset Password"
+    }
+
+    ,
+    "Register":{
+        "email:":"email:",
+        "Register Now:":"Register Now:",
+        "name:":"name:",
+        "password:":"password:",
+         "rePassword:":"rePassword:",
+         "phone:":"phone:",
+          "Register":"Register",
+         "success":"success",
+         "Name Should be more than or equal  3 chars":"Name Should be more than or equal  3 chars",
+         "Name Should be less than or equal  20 chars":"Name Should be less than or equal  20 chars",
+          "Enter Valid Email":"Enter Valid Email",
+         "Enter Valid password":"Enter Valid password",
+         "Password confirmation is incorrect":"Password confirmation is incorrect",
+        "accept only egypt phone numbers":"accept only egypt phone numbers",
+      "required:":"required:"
+    },
+     "nav":{
+        "login":"login",
+        "register":"register" 
+    }
+
+
+    
+   
+    
+   
+}

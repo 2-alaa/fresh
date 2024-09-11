@@ -30,9 +30,16 @@
               "src/assets"
             ],
             "styles": [
+               "node_modules/ngx-spinner/animations/ball-scale-multiple.css",
+               "node_modules/ngx-spinner/animations/square-spin.css",
+
+              "./node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+          ],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
@@ -44,8 +51,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "4mb"
                 },
                 {
                   "type": "anyComponentStyle",

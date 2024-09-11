@@ -1,0 +1,111 @@
+
+@if (detalisProduct) {
+
+
+
+
+<section class="mt-5">
+
+<h1 class="fw-bold text-main text-center pt-5">{{"detalis.details product" | translate}}</h1>
+
+<div class="container-fluid">
+    <div class="row align-items-center">
+        <div class="col-md-4">
+            <div class="p-5">
+                         <img [src]="detalisProduct.imageCover" class="w-100" [alt]="detalisProduct.title">
+            </div>
+            <owl-carousel-o [options]="customOptionsDet">
+               @for (item of produtList.images; track $index) {
+
+                <ng-container >
+                        <ng-template carouselSlide>
+                          <img [src]="detalisProduct.images" class="w-100" alt="">
+                        </ng-template>
+                      </ng-container>
+               }
+                    
+                    
+              
+                
+            
+              </owl-carousel-o>
+          
+            
+
+            
+
+
+        </div>
+        <div class="col-md-8">
+            <div class="p-5">
+                <div class="d-flex justify-content-between align-items-center pb-2">
+                       <h2 class="  fw-bold price-color p-2">{{detalisProduct.title}}</h2>
+               <img src="./assets/images/raya-logo.webp" class="w-25" alt="">
+  
+                </div>
+            
+                <p class="lead text-muted p-2 ">{{detalisProduct.description}}</p>
+
+                <h3 class="h5 fw-bold text-main p-2">{{detalisProduct.category.name}}</h3>
+                <div class="d-flex justify-content-between align-items-center p-2">
+                    <p class="h6 price-color fw-bold mt-2 ">{{detalisProduct.price}} EGB</p>
+                    <div>
+                        
+                        @for (num of [1,2,3,4,5].slice(0,detalisProduct.ratingsAverage); track $index) {
+                                                    <span><i class="fas fa-star rating-color"></i></span>
+
+                        }
+                       @if (detalisProduct.ratingsAverage%1 !==0) {
+                                                    <i class="fa-solid fa-star-half-stroke rating-color"></i>
+
+                       }
+                        
+                        <span class="text-muted">{{detalisProduct.ratingsAverage}}</span>
+                    </div>
+
+                     </div>
+
+                     <button (click)="addCart(detalisProduct.id)" class=" btn-color btn  w-100 text-capitalize mt-3"> add to cart<i class="fa-solid fa-cart-plus ps-2"></i></button>
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+</div>
+
+
+</section>
+}
+
+
+
+
+<owl-carousel-o [options]="customOptionsDet">
+
+    <ng-container >
+@for (item of detalis; track item.id) {}
+      <ng-template >
+      
+        <div>
+            <img [src]="" class="w-100" alt="">
+        </div>
+      </ng-template>
+
+
+    </ng-container>
+
+
+  </owl-carousel-o>
+
+
+
+
+
+
+
+
+

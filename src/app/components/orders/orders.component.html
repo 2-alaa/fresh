@@ -1,0 +1,23 @@
+<section>
+    <div class="container shadow rounded-4 bg-main-light p-5 my-5">
+    <h1 class="text-center"> {{"Orders.shippingAddress" |translate}} </h1>
+
+    <form [formGroup]="orders" (ngSubmit)="ordersSubmit()">
+        <div class="p-2">
+         <label class="px-1" for="detalis">{{"Orders.Detalis" |translate}}  </label>
+    <textarea formControlName="detalis" id="detalis" type="text" class="form-control"></textarea>   
+        </div>
+        <div class="p-2">
+            <label class="px-1" for="phone">{{"Orders.phone" |translate}}  </label>
+           <input formControlName="phone" id="phone" type="tel" class="form-control">    
+           </div>
+           <div class="p-2">
+            <label class="px-1" for="city">{{"Orders.city" |translate}}  </label>
+           <input formControlName="city" id="city" type="text" class="form-control">    
+           </div>
+
+           <button class="btn-main px-4 my-3 mx-2" type="submit">{{"Orders.Check Out" |translate}} </button>
+
+    </form>
+</div>
+</section>

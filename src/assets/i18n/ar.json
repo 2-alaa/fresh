@@ -1,0 +1,97 @@
+{
+    "navbar":{
+        "home":"الرئسيي",
+        "product":"المنتجات",
+         "categories": "الاقسام",
+         "brands":"العلامات التجاريه",
+         "signout": "تسجيل الخروج",
+         "lang":"غ"
+    },
+
+    "home":{
+        "popluar categries":"الفئات الشعبية",
+        "popular products":"المنتجات الشعبية",
+        "add to cart":"أضف إلى السلة"
+         
+    },
+
+    "product":{
+        "all products":"جميع المنتجات" 
+    },
+
+    "detalis":{
+        "details product":"تفاصيل المنتج" 
+    },
+
+    "cat":{
+        "all categories":"جميع الفئات" 
+    } ,
+
+    "brand":{
+        "all brands":"جميع العلامات التجارية" 
+    },
+
+
+    
+    "login":{
+        "login Now:":"تسجيل الدخول",
+        "email:":"بريد إلكتروني ",
+         "password:":"كلمة المرور",
+         "forgot password?":"هل نسيت كلمة السر؟"
+    },
+
+    "wishlist":{
+        "My wishlist":"القائمه المفضله",
+        "Remove":"حذف ",
+         "Add To Cart":"أضف إلى السلة"
+    },
+
+    "cart":{
+        "shop cart":"عربة التسوق",
+        "Clear Cart":"مسح العربه",
+        "Orders":"طلب ",
+        "Remove":"حذف "
+         
+    },
+    "Orders":{
+        "shippingAddress":"عنوان الشحن",
+
+        "Detalis":"التفاصيل",
+        "phone":"رقم الموبايل",
+        "city":"المحافظه ",
+         "Check Out":"الدفع "
+         
+    },
+    "forgot":{
+        "email:":"البريد الإلكتروني",
+        "verify email":"التحقق من البريد الالكتروني",
+        "resetCode":"إعادة تعيين الرمز",
+        "verify Code":"التحقق من الرمز",
+         "newPassword:":"كلمة المرور الجديدة:",
+         "Reset Password":"إعادة تعيين كلمة المرور"
+    },
+    "Register":{
+        "email:":"البريد الالكتروني",
+        "Register Now:":"سجل الآن:",
+        "name:":"الاسم:",
+        "password:":"كلمه المرور:",
+         "rePassword:":"إعادة كلمة المرور:",
+         "phone:":"رقم الموبايل:",
+          "Register":"تسجيل",
+         "success":"مرحبا",
+         "Name Should be more than or equal  3 chars":"يجب أن يكون الاسم أكثر من أو يساوي 3 أحرف",
+         "Name Should be less than or equal  20 chars":"يجب أن يكون الاسم أقل من أو يساوي 20 حرفًا",
+          "Enter Valid Email":"أدخل بريدًا إلكترونيًا صالحًا",
+         "Enter Valid password":"ادخل كلمه سر صحيحه",
+         "Password confirmation is incorrect":"تأكيد كلمة المرور غير صحيح",
+        "accept only egypt phone numbers":"نقبل أرقام الهواتف المصرية فقط",
+        "required:":"مطلوب:"
+    },
+    "nav":{
+       "login":"تسجيل الدخول",
+       "register":"تسجيل" 
+   }
+
+    
+   
+}

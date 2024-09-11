@@ -1,0 +1,43 @@
+<section  class="bg-main-light shadow rounded-2 m-5 ">
+    <h1 class="fw-bold text-main p-3 text-center">{{"brand.all brands" | translate}}</h1>
+ 
+ 
+ 
+ 
+    <div class="container my-4">
+     <div class="row g-3">
+ 
+ 
+ @for (item of brandList ; track item._id) {
+ 
+ 
+     <div class="col-md-2 ">
+             <div class="   product p-4 ">
+                 
+ 
+               
+                 <img [src]="item.image"  class="w-100 " [alt]="item.name">
+                 <h6 class=" text-main pt-1 fw-bold text-center">{{item.name}}</h6>
+         
+                      
+               
+ 
+                     </div>
+ 
+ 
+                
+             </div>
+       
+ }
+ 
+ 
+         
+         
+ 
+               
+     </div>
+           
+         
+     </div>
+   
+ </section>
