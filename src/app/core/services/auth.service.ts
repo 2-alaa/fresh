@@ -58,7 +58,7 @@ export class AuthService {
   }
 
   setResetPass(data:object):Observable<any>{
-    return this._HttpClient.put(`${environment.baseUrl}/api/v1/auth/verifyResetCode`,data)
+    return this._HttpClient.put(`${environment.baseUrl}/api/v1/auth/resetPassword`,data)
   }
 
 
